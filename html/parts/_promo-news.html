@@ -1,0 +1,38 @@
+<section class="promo-news">
+  <div class="container container--sm">
+    <div class="promo-news__wrap">
+      <h2 class="promo-news__title section-title">
+        Our Insights & Articles
+      </h2>
+      <a class="promo-news__all" href="#">
+        View All
+        <svg class="promo-news__arrow" width="7" height="12">
+          <use xlink:href="images/sprite.svg#arrow-news"></use>
+        </svg>
+      </a>
+    </div>
+    <ul class="promo-news__list">
+      <li class="promo-news__item">
+        @@include('../parts/_promo-news-card.html', {
+        "img": "images/news-photo/1.png",
+        "text": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "date": "28 january, 2020"
+        })
+      </li>
+      <li class="promo-news__item">
+        @@include('../parts/_promo-news-card.html', {
+        "img": "images/news-photo/2.png",
+        "text": "Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "date": "28 january, 2020"
+        })
+      </li>
+      <li class="promo-news__item">
+        @@include('../parts/_promo-news-card.html', {
+        "img": "images/news-photo/3.png",
+        "text": "Rncididunt ut labore et dolore magna aliqua. Ut enim",
+        "date": "28 january, 2020"
+        })
+      </li>
+    </ul>
+  </div>
+</section>

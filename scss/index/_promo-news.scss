@@ -1,0 +1,227 @@
+.promo-news {
+  position: relative;
+
+  &::before {
+    content: '';
+    height: 210px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $orange-300;
+    position: absolute;
+
+    @include r($r-md) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include r($r-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    line-height: 1;
+
+    @include r($r-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__all {
+    color: $black;
+    transition: color 0.3s, opacity 0.3s;
+
+    @include r($r-xs) {
+      display: none;
+    }
+
+    &:focus {
+      color: $blue-900;
+    }
+
+    &:hover {
+      color: $blue-800;
+
+      .promo-news__arrow {
+        fill: $blue-800;
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__arrow {
+    margin-left: 16px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include r($r-lg) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    position: relative;
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+
+    &:not(:last-child){
+      @include r($r-lg) {
+        margin-right: 25px;
+      }
+
+      @include r($r-md) {
+        margin: 0 0 40px 0;
+      }
+
+      @include r($r-sm) {
+        margin-right: 0;
+      }
+    }
+
+    @include r($r-lg) {
+      max-width: 300px;
+    }
+
+    @include r($r-md) {
+      max-width: 360px;
+    }
+
+    &:hover .promo-news-card__desc {
+      background-color: $blue-800;
+    }
+
+    &:focus {
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &-card {
+
+    &__img {
+      object-fit: contain;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+      @include r($r-lg) {
+        object-fit: cover;
+      }
+    }
+
+    &__desc {
+      position: absolute;
+      content: '';
+      top: 235px;
+      left: 0;
+      display: inline-block;
+      margin-left: 30px;
+      padding: 10px 30px;
+      background-color: $blue-600;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $white;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+
+      @include r($r-xs) {
+        top: 0;
+        left: -30px;
+      }
+    }
+
+    &__inner {
+      background-color: $white;
+      padding: 30px 50px 26px 30px;
+      color: $black;
+      min-height: 210px;
+
+      @include r($r-md) {
+        background-color: $orange-300;
+      }
+
+      @include r($r-xs) {
+        padding: 20px;
+      }
+    }
+
+    &__preview {
+      margin-bottom: 20px;
+      min-height: 110px;
+      line-height: 1.5;
+    }
+
+    &__text {
+      @include text-clamp(3);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &__meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Rubik', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      @include r($r-lg) {
+        font-size: 10px;
+      }
+    }
+
+    &__group {
+      padding-left: 20px;
+
+      &--date {
+        position: relative;
+
+        &::before {
+          content: '';
+          background-image: url('../images/sprite.svg#icon-calendar');
+          background-repeat: no-repeat;
+          background-size: 20px;
+          background-position: left;
+          top: 0;
+          left: -3px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+        }
+      }
+
+      &--admin {
+        position: relative;
+
+        &::before {
+          display: inline-block;
+          content: '';
+          background-image: url('../images/sprite.svg#icon-admin');
+          background-repeat: no-repeat;
+          background-size: 20px;
+          background-position: left;
+          top: 0;
+          left: -3px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

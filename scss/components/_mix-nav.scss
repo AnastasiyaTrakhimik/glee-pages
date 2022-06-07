@@ -1,0 +1,45 @@
+.mix-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  @include r($r-xs) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    @include r($r-xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+    line-height: 1;
+    color: $grey-800;
+    outline: transparent;
+    border-bottom: 2px dotted transparent;
+    transition: border-color 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $green-500;
+    }
+
+    &:focus {
+      color: $green-500;
+    }
+
+    &:active {
+      color: $black;
+    }
+  }
+}

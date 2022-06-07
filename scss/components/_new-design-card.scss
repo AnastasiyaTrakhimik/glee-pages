@@ -1,0 +1,43 @@
+.new-design-card {
+
+  &__wrap {
+    padding: 31px 0 135px 31px;
+    position: relative;
+
+    @include r($r-sm) {
+      padding-bottom: 210px;
+    }
+  }
+
+  &__group {
+    max-width: 175px;
+  }
+
+  &__title {
+    color: $black;
+  }
+
+  &__style {
+    color: $blue-600;
+  }
+
+  &__img {
+    object-fit: contain;
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 30px;
+    height: 150px;
+    width: 235px;
+
+    @include r($r-lg) {
+      height: 170px;
+      width: 310px;
+    }
+
+    @include r($r-md) {
+      max-width: 240px;
+    }
+  }
+}
+

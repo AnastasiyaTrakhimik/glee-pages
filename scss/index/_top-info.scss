@@ -1,0 +1,92 @@
+.top-info {
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include r($r-md) {
+      grid-template-columns: 100%;
+      grid-row-gap: 10px;
+    }
+  }
+
+  &__item {
+    background-color: $orange-300;
+    padding: 45px 10px;
+    font-family: 'DMSans', sans-serif;
+    display: flex;
+    justify-content: center;
+
+    @include r($r-md) {
+      padding: 20px 10px;
+      border: transparent;
+    }
+
+     @include r($r-xs) {
+       justify-content: start;
+     }
+
+    &:not(:last-child) {
+      border-right: 2px solid $grey-300;
+
+      @include r($r-md) {
+        border: transparent;
+      }
+    }
+
+    &:last-child {
+      border-right: 2px solid transparent;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    padding-left: 80px;
+    max-width: 280px;
+
+    @include r($r-xs) {
+      padding-left: 65px;
+      max-width: 100%;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+    }
+
+    &--support::before {
+      background-image: url('../images/sprite.svg#icon-support');
+    }
+
+    &--delivery::before {
+      background-image: url('../images/sprite.svg#icon-delivery');
+    }
+
+    &--payment::before {
+      background-image: url('../images/sprite.svg#icon-payment');
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 2.2;
+    color: $dark-700;
+    @include text-clamp(1);
+
+    @include r($r-xs) {
+      font-size: 17px;
+    }
+  }
+
+  &__descr {
+    font-weight: 400;
+    color: $dark-400;
+    @include text-clamp(2);
+  }
+}

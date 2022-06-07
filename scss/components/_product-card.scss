@@ -1,0 +1,126 @@
+.product-card {
+
+  &__wrap {
+    position: relative;
+    text-align: center;
+    padding: 40px 38px 20px;
+    flex-direction: column;
+
+    @include r($r-xs) {
+      padding: 20px 30px 0;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    margin-bottom: 60px;
+    width: 185px;
+    height: 195px;
+
+    @include r($r-sm) {
+      margin:0 auto 40px;
+    }
+
+    @include r($r-xs) {
+      margin: 0 auto;
+      object-fit: scale-down;
+    }
+  }
+
+  &__group {
+    margin-top: auto;
+    cursor: inherit;
+    font-weight: 500;
+    line-height: 2.5;
+  }
+
+  &__title{
+    @include text-clamp(1);
+  }
+
+  &__price {
+    color: $blue-600;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: $blue-600;
+    transition: fill 0.3s;
+  }
+
+  &__link {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid $grey-400;
+    background-color: $white;
+    transition: background-color, opacity 0.3s;
+
+    &:hover {
+      background-color: $blue-600;
+
+      .product-card__icon {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+      background-color: $blue-900;
+    }
+
+    &:active {
+      outline: $black;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    outline: transparent;
+    border: 1px solid $grey-400;
+    cursor: pointer;
+    background-color: $white;
+    padding: 0;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $blue-600;
+
+      .product-card__icon {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+      background-color: $blue-900;
+    }
+
+    &:active {
+      outline: $black;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    padding: 0 50px;
+    position: absolute;
+    left: 0;
+    bottom: 145px;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}

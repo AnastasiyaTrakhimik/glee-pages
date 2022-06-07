@@ -1,0 +1,36 @@
+.slider-suppliers {
+
+  padding: 94px 0;
+  background-color: $orange-300;
+
+  @include r($r-sm) {
+    padding: 64px 0;
+  }
+
+  @include r($r-xs) {
+    padding: 44px 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    opacity: 0.7;
+    transition: opasity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+
+    @include r($r-xs) {
+      width: 345px;
+    }
+  }
+}

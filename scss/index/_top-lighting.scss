@@ -1,0 +1,146 @@
+.top-lighting {
+
+  margin-bottom: 100px;
+
+  @include r($r-xs) {
+    margin-bottom: 75px;
+  }
+
+  &__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 32px;
+
+    @include r($r-md) {
+      grid-template-columns: 100%;
+      grid-row-gap: 152px;
+    }
+
+    @include r($r-sm) {
+      grid-row-gap: 52px;
+    }
+  }
+
+  &__item {
+    background-color: $orange-400;
+    padding: 80px 20px;
+
+    @include r($r-sm) {
+      padding: 30px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include r($r-xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__wrap {
+    margin-top: -170px;
+
+    @include r($r-sm) {
+      margin-top: 0;
+    }
+
+    @include r($r-xs) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-height:1080px) {
+      margin-top: -230px;
+    }
+
+    &--lamp1 {
+      margin-right: 20px;
+
+      @include r($r-xs) {
+        margin-right: 10px;
+      }
+    }
+
+    &--lamp2 {
+      margin-right: 60px;
+
+      @include r($r-xs) {
+        margin-right: 10px;
+      }
+
+      @media (min-height:1080px) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__image {
+    object-fit: contain;
+
+    @include r($r-xs) {
+      max-height: 203px;
+      max-width: 117px;
+    }
+  }
+
+  &__content {
+    color: $blue-900;
+    max-width: 300px;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    @include text-clamp(2);
+
+    @include r($r-md) {
+      font-size: 24px;
+    }
+
+    @include r($r-sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__descr {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    @include text-clamp(4);
+
+    @include r($r-xs) {
+      max-width: 200px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 24px 86px 24px 20px;
+    outline: transparent;
+    position: relative;
+    color: $default;
+    line-height: 1;
+    border: 1px solid $grey-400;
+    border-radius: 5px;
+
+    @include r($r-sm) {
+      padding-right: 65px;
+    }
+
+    &::before {
+      content: '';
+      background-image: url('../images/sprite.svg#dark-arrow');
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: right;
+      top: 26px;
+      right: 22px;
+      width: 22px;
+      height: 9px;
+      position: absolute;
+    }
+  }
+}

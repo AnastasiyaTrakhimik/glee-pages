@@ -1,0 +1,42 @@
+<article class="product-card">
+  <div class="product-card__wrap">
+    <img class="product-card__img" src="@@img" alt="Product card" width="185" height="195">
+    <div class="product-card__group">
+      <h3 class="product-card__title">@@name</h3>
+      <div class="product-card__price">
+        <span>$</span>@@price
+      </div>
+    </div>
+    <div class="product-card__inner">
+      <ul class="product-card__items">
+
+        <li class="product-card__item">
+          <a class="product-card__link">
+            <span class="visually-hidden">Go to product</span>
+            <svg class="product-card__icon" width="16" height="16">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="product-card__icon">
+          <button class="product-card__btn" href="#">
+            <span class="visually-hidden">Add to basket</span>
+            <svg class="product-card__icon" width="19" height="17">
+              <use xlink:href="images/sprite.svg#icon-basket"></use>
+            </svg>
+          </button>
+        </li>
+
+        <li class="product-card__icon">
+          <button class="product-card__btn" href="#">
+            <span class="visually-hidden">Add to favorites</span>
+            <svg class="product-card__icon" width="19" height="17">
+              <use xlink:href="images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
